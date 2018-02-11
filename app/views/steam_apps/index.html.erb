@@ -1,8 +1,14 @@
 hello world
-<ul>
+<% SteamApp.search_for("Counter-Strike").each do |app| %>
+<div>
+  <%= app["name"]%>
+</div>
+<% end %>
+
+<!-- <ul>
   <% @apps.each do |app| %>
     <li>
       <%= app["name"] %>
     </li>
   <% end %>
-</ul>
+</ul> -->
