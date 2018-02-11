@@ -57,3 +57,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'httparty'
 gem 'rest-client'
 gem 'devise'
+gem "scoped_search"

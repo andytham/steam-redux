@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+file = File.read "db/steam-apps-list.json"
+json = JSON.parse(file)
+list = json["applist"]["apps"]
+formattedList = []
+list.each do |item|
+  formattedList << item
+end
+formattedList.each_with_index do |app,i|
+  SteamApps.create!(appid: "#{formattedList[i]["appid"]}", name: "#{formattedList[i]["name"]}" )
+end
+
+
+puts "#{SteamApps.count} total apps created"

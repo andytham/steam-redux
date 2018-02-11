@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class SteamAppListTest < ActiveSupport::TestCase
+class SteamAppTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

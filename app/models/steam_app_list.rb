@@ -1,2 +1,0 @@
-class SteamAppList < ApplicationRecord
-end
