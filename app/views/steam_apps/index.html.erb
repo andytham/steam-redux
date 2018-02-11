@@ -1,5 +1,6 @@
 hello world
-<% SteamApp.search_for("Counter-Strike").each do |app| %>
+
+<% SteamApp.search_for(params[:search]).each do |app| %>
 <div>
   <%= app["name"]%>
 </div>
