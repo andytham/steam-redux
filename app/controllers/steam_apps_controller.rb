@@ -3,5 +3,7 @@ class SteamAppsController < ApplicationController
     @apps = SteamApp.where(appid: 1..50)
 
   end
+  def new
 
+  end
 end
