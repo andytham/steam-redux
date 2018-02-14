@@ -1,0 +1,8 @@
+<% @newsAll.each do |news| %>
+<div class="news-header">
+  News for <%= @app %>
+</div>
+<div class="news-content">
+  <%= news.html_safe %>
+</div>
+<% end %>

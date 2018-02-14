@@ -1,0 +1,3 @@
+<%= @favApp.app %>
+
+<%= button_to "kill me", fav_app_path(@favApp.id), data: { confirm: "Are you sure?" }, method: :delete %>

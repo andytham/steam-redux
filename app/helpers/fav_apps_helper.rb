@@ -1,0 +1,2 @@
+module FavAppsHelper
+end

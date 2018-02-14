@@ -1,0 +1,10 @@
+<% @favApps.each do |app| %>
+  <% SteamApp.search_for(app.app, profile: :appid).each do |id| %>
+  <div>
+    <%= id["name"]%>
+  </div>
+  <div>
+    <%= link_to "delete", fav_app_path(:id => app.id), :method => :delete %>
+  </div>
+  <% end %>
+<% end %>
