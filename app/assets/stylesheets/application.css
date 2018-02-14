@@ -125,3 +125,24 @@ a:hover {
 .search-wrapper{
   text-align: center;
 }
+
+/* devise */
+.devise-container{
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.field{
+  margin: 10px;
+}
+
+.actions{
+  margin: 30px;
+}
+
+.notice{
+  opacity: .5;
+  transition: 2s;
+}
