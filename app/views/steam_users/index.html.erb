@@ -1,0 +1,15 @@
+<%= render partial: "header" %>
+
+<div class="user-all-container">
+  <div class="user-container">
+    <div class="user-text">
+      this is <%= @user["personaname"] %>
+    </div>
+    <div class="user-image">
+      <img src="<%= @user["avatarfull"] %>" />
+    </div>
+    <div class="user-profile">
+      <a href="<%= @user["profileurl"] %>"> Click here to visit their steam profile </a>
+    </div>
+  </div>
+</div>

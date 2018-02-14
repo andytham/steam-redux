@@ -122,10 +122,17 @@ a:hover {
 
 /* form search page */
 
-.search-wrapper{
+.search-bar{
   text-align: center;
 }
-
+.search-text{
+  margin: 10px;
+}
+.search-container{
+  text-align: center;
+  display:flex;
+  flex-direction: column;
+}
 /* devise */
 .devise-container{
   text-align: center;
@@ -158,5 +165,17 @@ a:hover {
   margin: 5px;
 }
 .result-button{
+  margin: 5px;
+}
+
+/* user search result */
+
+.user-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.user-container > *{
   margin: 5px;
 }

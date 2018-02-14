@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   resources :fav_apps, :path => "apps"
   resources :news
-
+  resources :steam_users, :path => "steamusers"
 end

@@ -1,7 +1,23 @@
 <%= render partial: "header" %>
-<div class="search-wrapper">
-<%= form_tag(steam_apps_path, :method => "get", id: "search-form") do %>
-  <%= text_field_tag :search, params[:search], placeholder: "search apps" %>
-  <%= submit_tag "Search", :name => nil %>
-<% end %>
+<div class="search-container">
+  <div class="search-text"> Search Apps </div>
+  <div class="search-bar">
+  <%= form_tag(steam_apps_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "search apps" %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %>
+  </div>
+
+  <div class="search-text"> or </div>
+
+  <div class="search-text"> Search Users <br /> by Vanity Name <br /> or by 64-bit ID</div>
+  <div class="search-bar">
+  <%= form_tag(steam_users_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "search users" %>
+    <%= submit_tag "Search", :name => nil %>
+  <% end %>
+  </div>
+
+
+  </div>
 </div>
