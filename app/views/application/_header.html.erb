@@ -1,1 +1,31 @@
-helllo im a partial
+<div class="header">
+
+
+
+  <div class="link"><%= link_to "Your App List", fav_apps_path, :method => :get %></div>
+  <div class="link"><%= link_to "Your App News", news_index_path, :method => :get %></div>
+
+  <div class="link">
+    <%= link_to "Search", search_index_path, :method => :get%>
+  </div>
+
+  <div class="devise">
+    <% if current_user %>
+      <div class="link">
+        <%= link_to "Settings", edit_user_registration_path,:method => :get%>
+      </div>
+      <div class="link">
+        <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+      </div>
+    <% else %>
+      <div class="link">
+        <%= link_to "Register", new_user_registration_path, :method => :get %>
+      </div>
+      <div class="link">
+        <%= link_to "Log In", new_user_session_path, :method => :get %>
+      </div>
+    <% end %>
+  </div>
+
+
+</div>
