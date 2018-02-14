@@ -1,6 +1,6 @@
 class SteamAppsController < ApplicationController
   def index
-    @apps = SteamApp.where(appid: 1..50)
+    @apps = SteamApp.where(appid: 1..10)
     if current_user
       puts "hello"
     else

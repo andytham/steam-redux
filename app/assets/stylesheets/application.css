@@ -15,8 +15,113 @@
  */
 /*
  *{background-color: red;} */
+*{
+  font-family: 'Duru Sans', sans-serif;
 
+  font: #879FB9;
+}
+body{
+  background-color: #ECF1F0;
+}
 .button{
   font-size: 20px;
   font: red;
+}
+
+a {
+  color: lightblue;
+  text-decoration: none; /* no underline */
+}
+a:hover {
+  color:#664AB1;
+}
+/* landing page */
+.lol{
+  text-align: center
+}
+
+/* header styles */
+
+.header{
+  display: grid;
+  width: 100%;
+  grid-template-columns: .5fr 2fr .5fr;
+  grid-template-rows: 1 100px;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.nav{
+  grid-column: 2 / span 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%
+}
+
+.devise{
+  grid-column: 3 / span 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.link{
+  margin: 10px;
+}
+
+/* search page */
+
+.search-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.search-name{
+  margin: 5px;
+}
+.search-link{
+  margin: 5px;
+}
+
+/* news page */
+.news-all-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto;
+}
+.news-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+.news-header{
+  margin: 45px 0 15px 0;
+  text-align: center;
+  border: 3px solid rgb(221, 214, 247);
+  border-radius: 5px;
+  background: rgb(213, 216, 226);
+}
+
+.news-content{
+  border: 1px solid rgb(213, 216, 226);
+  border-radius: 5px;
+  padding: 30px;
+  background: #FFFFFF;
+}
+
+/* form search page */
+
+.search-wrapper{
+  text-align: center;
 }

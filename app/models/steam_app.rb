@@ -3,5 +3,5 @@ class SteamApp < ApplicationRecord
   belongs_to :user
   scoped_search on: [:name, :appid]
   # default_operator overrides LIKE
-  scoped_search on: :appid, profile: :appid, default_operator: :eq
+  scoped_search on: :appid, profile: :appid, default_operator: :eq,complete_value: true
 end

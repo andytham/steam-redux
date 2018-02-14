@@ -1,9 +1,13 @@
 <%= render partial: "header" %>
-<% @newsAll.each do |news| %>
-<div class="news-header">
-  News for <%= news[:name] %>
+<div class="news-all-container">
+  <% @newsAll.each do |news| %>
+  <div class="news-container">
+    <div class="news-header">
+      News for <%= news[:name] %>
+    </div>
+    <div class="news-content">
+      <%= news[:content].html_safe %>
+    </div>
+  </div>
+  <% end %>
 </div>
-<div class="news-content">
-  <%= news[:content].html_safe %>
-</div>
-<% end %>

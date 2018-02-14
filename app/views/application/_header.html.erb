@@ -1,12 +1,14 @@
+<link href="https://fonts.googleapis.com/css?family=Duru+Sans" rel="stylesheet">
 <div class="header">
 
 
+  <div class="nav">
+    <div class="link"><%= link_to "Apps", fav_apps_path, :method => :get %></div>
+    <div class="link"><%= link_to "News", news_index_path, :method => :get %></div>
 
-  <div class="link"><%= link_to "Your App List", fav_apps_path, :method => :get %></div>
-  <div class="link"><%= link_to "Your App News", news_index_path, :method => :get %></div>
-
-  <div class="link">
-    <%= link_to "Search", search_index_path, :method => :get%>
+    <div class="link">
+      <%= link_to "Search", search_index_path, :method => :get%>
+    </div>
   </div>
 
   <div class="devise">
@@ -15,14 +17,14 @@
         <%= link_to "Settings", edit_user_registration_path,:method => :get%>
       </div>
       <div class="link">
-        <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
+        <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
       </div>
     <% else %>
       <div class="link">
         <%= link_to "Register", new_user_registration_path, :method => :get %>
       </div>
       <div class="link">
-        <%= link_to "Log In", new_user_session_path, :method => :get %>
+        <%= link_to "Login", new_user_session_path, :method => :get %>
       </div>
     <% end %>
   </div>

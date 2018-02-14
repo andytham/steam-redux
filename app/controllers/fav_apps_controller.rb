@@ -1,6 +1,12 @@
 class FavAppsController < ApplicationController
   def index
-    @favApps = Favorite.all
+    if current_user
+      @favApps = Favorite.where(user_id: current_user.id)
+    else
+      redirect_to user_session_path
+    end
+
+
   end
 
   def show

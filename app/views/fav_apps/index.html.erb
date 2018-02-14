@@ -1,11 +1,13 @@
 <%= render partial: "header" %>
 <% @favApps.each do |app| %>
   <% SteamApp.search_for(app.appid, profile: :appid).each do |id| %>
-  <div>
-    <%= id["name"]%>
-  </div>
-  <div>
-    <%= link_to "delete", fav_app_path(:id => app.id), :method => :delete %>
+  <div class="search-container">
+    <div class="search-name">
+      <%= id["name"]%>
+    </div>
+    <div class="search-link">
+      <%= link_to "delete", fav_app_path(:id => app.id), :method => :delete %>
+    </div>
   </div>
   <% end %>
 <% end %>
