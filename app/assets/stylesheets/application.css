@@ -146,3 +146,17 @@ a:hover {
   opacity: .5;
   transition: 2s;
 }
+
+/* search results pages */
+
+.result-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.result-name{
+  margin: 5px;
+}
+.result-button{
+  margin: 5px;
+}

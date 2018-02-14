@@ -1,0 +1,2 @@
+class SteamUsersController < ApplicationController
+end

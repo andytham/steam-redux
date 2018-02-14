@@ -1,5 +1,5 @@
 <%= render partial: "header" %>
-
+<div class="result-all-container">
 <% SteamApp.search_for(params[:search]).each do |app| %>
 <div class="result-container">
   <div class="result-name">
@@ -10,7 +10,7 @@
   </div>
 </div>
 <% end %>
-
+</div>
 <!-- <ul>
   <% @apps.each do |app| %>
     <li>
