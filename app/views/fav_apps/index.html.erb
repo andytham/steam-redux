@@ -1,13 +1,19 @@
 <%= render partial: "header" %>
-<% @favApps.each do |app| %>
-  <% SteamApp.search_for(app.appid, profile: :appid).each do |id| %>
-  <div class="search-container">
-    <div class="search-name">
-      <%= id["name"]%>
+<% if @favApps %>
+  <% @favApps.each do |app| %>
+    <% SteamApp.search_for(app.appid, profile: :appid).each do |id| %>
+    <div class="search-container">
+      <div class="search-name">
+        <%= id["name"]%>
+      </div>
+      <div class="search-link">
+        <%= link_to "delete", fav_app_path(:id => app.id), :method => :delete %>
+      </div>
     </div>
-    <div class="search-link">
-      <%= link_to "delete", fav_app_path(:id => app.id), :method => :delete %>
-    </div>
-  </div>
+    <% end %>
   <% end %>
+<% else %>
+<div class="center-text">
+  No favorites found.
+</div>
 <% end %>

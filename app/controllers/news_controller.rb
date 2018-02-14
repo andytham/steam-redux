@@ -16,13 +16,9 @@ class NewsController < ApplicationController
           @newsAll << @newsObj.clone
           @newsObj.clear
         end
-
       end
     else
       redirect_to user_session_path
     end
-
-
   end
-
 end

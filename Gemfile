@@ -58,3 +58,4 @@ gem 'httparty'
 gem 'rest-client'
 gem 'devise'
 gem "scoped_search"
+gem "nokogiri"

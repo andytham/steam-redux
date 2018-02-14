@@ -1,16 +1,24 @@
 <%= render partial: "header" %>
 <div class="result-all-container">
 <% SteamApp.search_for(params[:search]).each do |app| %>
-<div class="result-container">
-  <div class="result-name">
-    <%= app["name"]%>
+  <% if app %>
+    <div class="result-container">
+      <div class="result-name">
+        <%= app["name"]%>
+      </div>
+      <div class="result-button">
+        <%= button_to "Add to Favorites", action:"create", params: { user_id: current_user.id, name: app["name"], appid: app["appid"]}, method: :post%>
+      </div>
+    </div>
+  <% else %>
+  <div class="center-text">
+    No results found.
   </div>
-  <div class="result-button">
-    <%= button_to "Add to Favorites", action:"create", params: { user_id: current_user.id, name: app["name"], appid: app["appid"]}, method: :post%>
-  </div>
-</div>
+  <% end %>
 <% end %>
 </div>
+<% puts "  HELLO     " %>
+<% puts SteamApp.search_for(params[:search]) %>
 <!-- <ul>
   <% @apps.each do |app| %>
     <li>
