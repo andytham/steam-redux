@@ -3,17 +3,22 @@ class NewsController < ApplicationController
     @apps = Favorite.all
     @newsAll = []
     @appNames = []
-    @objecttest = {}
+    @newsObj = {}
+
     @apps.each do |app|
       response = RestClient::Request.execute(
         method: :get,
-        url: "https://accesscontrolalloworiginall.herokuapp.com/https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=#{app.app}&count=3\r\n"
+        url: "https://accesscontrolalloworiginall.herokuapp.com/https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=#{app.appid}&count=3\r\n"
       )
       poop = JSON.parse(response)
+
       if poop != {}
-        @objecttest[:app.name] 
-        @newsAll << JSON.parse(response)["appnews"]["newsitems"][0]["contents"]
+        @newsObj[:name] = app.name
+        @newsObj[:content] = JSON.parse(response)["appnews"]["newsitems"][0]["contents"]
+        @newsAll << @newsObj
+        puts @newsObj
       end
+
     end
   end
 

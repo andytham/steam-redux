@@ -9,7 +9,7 @@ class SteamAppsController < ApplicationController
   end
 
   def create
-    Favorite.find_or_create_by(app: params[:app], name: params[:name], user_id: params[:user_id])
+    Favorite.find_or_create_by(user_id: params[:user_id], appid: params[:appid], name: params[:name])
   end
 
 end

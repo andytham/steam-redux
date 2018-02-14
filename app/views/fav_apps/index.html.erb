@@ -1,5 +1,5 @@
 <% @favApps.each do |app| %>
-  <% SteamApp.search_for(app.app, profile: :appid).each do |id| %>
+  <% SteamApp.search_for(app.appid, profile: :appid).each do |id| %>
   <div>
     <%= id["name"]%>
   </div>

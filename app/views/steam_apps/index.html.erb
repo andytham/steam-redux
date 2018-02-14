@@ -5,7 +5,7 @@ hello world
   <%= app["name"]%>
 </div>
 <div>
-  <%= button_to "Add to Favorites", action:"create", params: { user_id: current_user.id, name: app["name"] app: app["appid"]}, method: :post%>
+  <%= button_to "Add to Favorites", action:"create", params: { user_id: current_user.id, name: app["name"], appid: app["appid"]}, method: :post%>
 </div>
 <% end %>
 
